@@ -1,0 +1,74 @@
+{
+    "name": "Meme (world)",
+    "servePlaceIds": [
+        121024703217835,
+        81929958800191,
+        115999976644452
+    ],
+    "globIgnorePaths": [
+        "**/package.json",
+        "**/tsconfig.json"
+    ],
+    "emitLegacyScripts": false,
+    "tree": {
+        "$className": "DataModel",
+        "Workspace": {
+            "$path": "world/Workspace",
+            "$ignoreUnknownInstances": true
+        },
+        "MaterialService": {
+            "$path": "world/MaterialService"
+        },
+        "SoundService": {
+            "$path": "world/SoundService"
+        },
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "meme": {
+                "$className": "Folder",
+                "server-runtime": {
+                    "$path": "out/world/src/server"
+                }
+            }
+        },
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "rbxts_include": {
+                "$path": "include",
+                "node_modules": {
+                    "$className": "Folder",
+                    "@rbxts": {
+                        "$path": "../../node_modules/@rbxts"
+                    },
+                    "@flamework": {
+                        "$path": "../../node_modules/@flamework"
+                    }
+                }
+            },
+            "meme": {
+                "$className": "Folder",
+                "common": {
+                    "$path": "out/common/src"
+                },
+                "shared-runtime": {
+                    "$path": "out/world/src/shared"
+                },
+                "client-runtime": {
+                    "$path": "out/world/src/client"
+                }
+            }
+        },
+        "StarterPlayer": {
+            "$path": "world/StarterPlayer",
+            "$ignoreUnknownInstances": true
+        },
+        "Players": {
+            "$path": "world/Players"
+        },
+        "Lighting": {
+            "$properties": {
+                "Technology": "Future"
+            }
+        }
+    }
+}

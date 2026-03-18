@@ -1,0 +1,16 @@
+node_modules/
+include/
+out/
+include/
+.DS_Store/
+.DS_Store
+*.tsbuildinfo
+flamework.build
+build.rbxl*
+build.rbxl*.lock
+.yalc
+yalc.lock
+flamework.build
+dist/
+*.style.model.json
+.lastenv

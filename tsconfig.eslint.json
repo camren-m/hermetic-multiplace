@@ -1,0 +1,8 @@
+{
+	"include": [
+		"eslint.config.ts"
+	],
+	"compilerOptions": {
+		"module": "esnext"
+	}
+}

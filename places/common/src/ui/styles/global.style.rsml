@@ -1,0 +1,38 @@
+$MerriweatherRegular = font("Merriweather");
+$MerriweatherRegularItalic = font("Merriweather", :Regular, :Italic);
+
+Frame {
+    Active = false;
+    AutomaticSize = :None;
+    BackgroundColor3 = rgb(255, 255, 255);
+    BackgroundTransparency = 1;
+    AnchorPoint = vec2(0.5, 0.5);
+    Position = udim2(0.5, 0, 0.5, 0);
+    Size = udim2(1, 0, 1, 0);
+    ZIndex = 1;
+    BorderSizePixel = 0;
+}
+CanvasGroup {
+    Active = false;
+    AutomaticSize = :None;
+    BackgroundColor3 = rgb(255, 255, 255);
+    BackgroundTransparency = 1;
+    AnchorPoint = vec2(0.5, 0.5);
+    Position = udim2(0.5, 0, 0.5, 0);
+    Size = udim2(1, 0, 1, 0);
+    ZIndex = 1;
+    BorderSizePixel = 0;
+}
+TextLabel {
+    BackgroundTransparency = 1;
+    BorderSizePixel = 0;
+    TextColor3 = #fff;
+    FontFace = $MerriweatherRegular;
+}
+TextButton {
+    BackgroundTransparency = 1;
+}
+ImageLabel {
+    BackgroundTransparency = 1;
+    BorderSizePixel = 0;
+}

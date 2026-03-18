@@ -1,0 +1,34 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+    - prod
+
+env:
+  NODE_ENV: prod
+
+jobs:
+  deploy-prod:
+    name: Deploy (production)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install Rokit dependencies
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Build projects
+        run: npm run build -- -y
+
+      - name: Publish place (world)
+        run: rbxcloud experience publish --filename dist/world.rbxl --place-id ${{ vars.PROD_WORLD_PLACEID }} --universe-id ${{ vars.PROD_EXPERIENCEID }} --version-type published --api-key ${{ secrets.OC_API_KEY_PROD }}
+      
+      - name: Publish place (lobby)
+        run: rbxcloud experience publish --filename dist/lobby.rbxl --place-id ${{ vars.PROD_LOBBY_PLACEID }} --universe-id ${{ vars.PROD_EXPERIENCEID }} --version-type published --api-key ${{ secrets.OC_API_KEY_PROD }}

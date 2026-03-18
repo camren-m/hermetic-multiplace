@@ -1,0 +1,56 @@
+{
+    "name": "Meme (lobby)",
+    "servePort": 34871,
+    "servePlaceIds": [
+        89746346109474,
+        97047225573202,
+        114434262958823
+    ],
+    "emitLegacyScripts": false,
+    "globIgnorePaths": [
+        "**/package.json",
+        "**/tsconfig.json"
+    ],
+    "tree": {
+        "$className": "DataModel",
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "meme": {
+                "$className": "Folder",
+                "server-runtime": {
+                    "$path": "out/lobby/src/server"
+                }
+            }
+        },
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "rbxts_include": {
+                "$path": "include",
+                "node_modules": {
+                    "$className": "Folder",
+                    "@rbxts": {
+                        "$path": "../../node_modules/@rbxts"
+                    },
+                    "@flamework": {
+                        "$path": "../../node_modules/@flamework"
+                    }
+                }
+            },
+            "meme": {
+                "$className": "Folder",
+                "common": {
+                    "$path": "out/common/src"
+                },
+                "shared-runtime": {
+                    "$path": "out/lobby/src/shared"
+                },
+                "client-runtime": {
+                    "$path": "out/lobby/src/client"
+                }
+            }
+        },
+        "StarterPlayer": {
+            "$ignoreUnknownInstances": true
+        }
+    }
+}

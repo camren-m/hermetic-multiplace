@@ -1,0 +1,34 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+    - staging
+
+env:
+  NODE_ENV: staging
+
+jobs:
+  deploy-staging:
+    name: Deploy (staging)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install Rokit dependencies
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Build projects
+        run: npm run build -- -y
+
+      - name: Publish place (world)
+        run: rbxcloud experience publish --filename dist/world.rbxl --place-id ${{ vars.STAGING_WORLD_PLACEID }} --universe-id ${{ vars.STAGING_EXPERIENCEID }} --version-type published --api-key ${{ secrets.OC_API_KEY_STAGING }}
+
+      - name: Publish place (lobby)
+        run: rbxcloud experience publish --filename dist/lobby.rbxl --place-id ${{ vars.STAGING_LOBBY_PLACEID }} --universe-id ${{ vars.STAGING_EXPERIENCEID }} --version-type published --api-key ${{ secrets.OC_API_KEY_STAGING }}

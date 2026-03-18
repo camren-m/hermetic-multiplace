@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		// required
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
+		"jsx": "react",
+		"jsxFactory": "Vide.jsx",
+		"jsxFragmentFactory": "Vide.Fragment",
+		"module": "commonjs",
+		"moduleResolution": "Node",
+		"noLib": true,
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleDetection": "force",
+		"strict": true,
+		"target": "ESNext",
+		"typeRoots": ["node_modules/@rbxts"],
+		"baseUrl": ".",
+		"paths": {
+			"@common/*": ["places/common/src/*"],
+			"@lobby/*": ["places/lobby/src/*"],
+			"@world/*": ["places/world/src/*"]
+		},
+
+		// configurable
+		"incremental": true,
+		"plugins": [
+			{
+				"transform": "rbxts-transformer-flamework",
+				"obfuscation": false
+			},
+			{
+				"transform": "rbxts-transform-env"
+			}
+		]
+	}
+}
