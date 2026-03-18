@@ -13,6 +13,16 @@
     ],
     "tree": {
         "$className": "DataModel",
+        "Workspace": {
+            "$path": "world/Workspace",
+            "$ignoreUnknownInstances": true
+        },
+        "MaterialService": {
+            "$path": "world/MaterialService"
+        },
+        "SoundService": {
+            "$path": "world/SoundService"
+        },
         "ServerScriptService": {
             "$className": "ServerScriptService",
             "meme": {
@@ -50,7 +60,16 @@
             }
         },
         "StarterPlayer": {
+            "$path": "world/StarterPlayer",
             "$ignoreUnknownInstances": true
+        },
+        "Players": {
+            "$path": "world/Players"
+        },
+        "Lighting": {
+            "$properties": {
+                "Technology": "Future"
+            }
         }
     }
 }

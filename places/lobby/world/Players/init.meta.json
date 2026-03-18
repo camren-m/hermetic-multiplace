@@ -1,0 +1,7 @@
+{
+	"className": "Players",
+	"properties": {
+		"CharacterAutoLoads": false
+	},
+	"ignoreUnknownInstances": true
+}

@@ -1,0 +1,8 @@
+{
+	"className": "StarterPlayer",
+	"properties": {
+		"CameraMode": "LockFirstPerson",
+		"CharacterWalkSpeed": 13,
+		"CharacterJumpHeight": 3.5
+	}
+}

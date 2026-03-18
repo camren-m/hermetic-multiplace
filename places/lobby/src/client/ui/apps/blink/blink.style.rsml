@@ -1,0 +1,3 @@
+.BlinkAppRoot {
+    Size = udim2(100%);
+}
