@@ -1,7 +1,13 @@
 import { env, orchestraConfig, script, semverString } from "rbxts-orchestra";
 
+const EXPERIENCE_ID = env({
+    prod: 9899262995,
+    staging: 9899307252,
+    dev: 9899298727,
+});
+
 export default orchestraConfig({
-	releaseNumber: semverString("0.2.0", ["staging"], ["dev"]),
+releaseNumber: semverString("0.2.0", ["staging"], ["dev"]),
 	releaseName: "some assembly required",
 	environments: {
 		prod: { nodeEnv: "prod" },
@@ -19,12 +25,12 @@ export default orchestraConfig({
 	places: [
 		{
 			rootDir: "places/lobby",
-			experienceId: env({
+			experienceId: EXPERIENCE_ID,
+			placeId: env({
 				prod: 89746346109474,
 				staging: 97047225573202,
 				dev: 114434262958823,
 			}),
-			placeId: 1,
 			scripts: {
 				build: script("./scripts/build.sh"),
 				dev: script("./scripts/dev.sh", {
@@ -35,12 +41,12 @@ export default orchestraConfig({
 		},
 		{
 			rootDir: "places/world",
-			experienceId: env({
-				prod: 121024703217835,
-				staging: 81929958800191,
-				dev: 115999976644452,
-			}),
-			placeId: 1,
+			experienceId: EXPERIENCE_ID,
+			placeId: env({
+                prod: 121024703217835,
+                staging: 81929958800191,
+                dev: 115999976644452
+            }),
 			scripts: {
 				build: script("./scripts/build.sh"),
 				publish: script("./scripts/publish.sh"),
