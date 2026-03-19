@@ -34,4 +34,4 @@ else
     exit 1
 fi
 
-gh release upload $RELEASE_NUMBER dist/*.rbxl
+gh release upload v$RELEASE_NUMBER dist/*.rbxl
