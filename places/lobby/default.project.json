@@ -1,5 +1,5 @@
 {
-    "name": "Meme (lobby)",
+    "name": "Hermetic Multiplace Template (lobby)",
     "servePort": 34871,
     "servePlaceIds": [
         89746346109474,
@@ -25,7 +25,7 @@
         },
         "ServerScriptService": {
             "$className": "ServerScriptService",
-            "meme": {
+            "game": {
                 "$className": "Folder",
                 "server-runtime": {
                     "$path": "out/lobby/src/server"
@@ -46,7 +46,7 @@
                     }
                 }
             },
-            "meme": {
+            "game": {
                 "$className": "Folder",
                 "common": {
                     "$path": "out/common/src"

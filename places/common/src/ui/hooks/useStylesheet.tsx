@@ -1,7 +1,7 @@
 import { ReplicatedStorage } from "@rbxts/services";
 import Vide, { cleanup, effect, Source, source } from "@rbxts/vide";
 
-const GLOBAL_STYLESHEET = ReplicatedStorage.meme.common.ui.styles["global.style"];
+const GLOBAL_STYLESHEET = ReplicatedStorage.game.common.ui.styles["global.style"];
 
 Vide.defaults = false;
 Vide.strict = true;
