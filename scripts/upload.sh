@@ -21,11 +21,13 @@ fi
 
 if [ "$NODE_ENV" == "prod" ]; then
     gh release create "v$RELEASE_NUMBER" \
+        --draft \
         --latest \
         --generate-notes \
         --title "($RELEASE_NUMBER) $RELEASE_NAME"
 elif [ "$NODE_ENV" == "staging" ]; then
     gh release create "v$RELEASE_NUMBER" \
+        --draft \
         --prerelease \
         --generate-notes \
         --title "($RELEASE_NUMBER) $RELEASE_NAME"
@@ -35,3 +37,4 @@ else
 fi
 
 gh release upload v$RELEASE_NUMBER dist/*.rbxl
+gh release edit v$RELEASE_NUMBER --draft=false
