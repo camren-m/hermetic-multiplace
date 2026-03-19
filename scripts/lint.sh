@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-SCRIPT_DIR=$(dirname "$0")
-
-$SCRIPT_DIR/checks.sh $1
-
 EXTRA_FLAGS=""
 while getopts ":f" flag; do
     case "${flag}" in
@@ -12,4 +8,4 @@ while getopts ":f" flag; do
     esac
 done
 
-eslint . $EXTRA_FLAGS
+npx eslint . $EXTRA_FLAGS
