@@ -1,5 +1,5 @@
 interface ReplicatedStorage extends Instance {
-	meme: Folder & {
+	game: Folder & {
 		common: Folder & {
 			ui: Folder & {
 				styles: Folder & {

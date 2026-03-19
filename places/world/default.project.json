@@ -1,5 +1,5 @@
 {
-    "name": "Meme (world)",
+    "name": "Hermetic Multiplace Template (world)",
     "servePlaceIds": [
         121024703217835,
         81929958800191,
@@ -24,7 +24,7 @@
         },
         "ServerScriptService": {
             "$className": "ServerScriptService",
-            "meme": {
+            "game": {
                 "$className": "Folder",
                 "server-runtime": {
                     "$path": "out/world/src/server"
@@ -45,7 +45,7 @@
                     }
                 }
             },
-            "meme": {
+            "game": {
                 "$className": "Folder",
                 "common": {
                     "$path": "out/common/src"

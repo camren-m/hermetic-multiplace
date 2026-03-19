@@ -1,5 +1,5 @@
 {
-  "name": "meme",
+  "name": "hermetic-multiplace-template",
   "version": "1.0.0",
   "main": "out/init.lua",
   "license": "MIT",
