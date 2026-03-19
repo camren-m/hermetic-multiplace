@@ -9,7 +9,7 @@
         TextSize = 14;
 
         ::UIStroke {
-
+            Thickness = 1;
         }
     }
 
