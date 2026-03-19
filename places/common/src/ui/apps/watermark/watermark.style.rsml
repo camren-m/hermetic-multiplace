@@ -1,0 +1,17 @@
+.WatermarkAppRoot {
+    Size = udim2(100%);
+
+    > TextLabel {
+        FontFace = $MerriweatherRegular;
+        AnchorPoint = vec2(0, 1);
+        Position = udim2(0%, 100%);
+        AutomaticSize = :XY;
+        TextSize = 14;
+
+        ::UIStroke {
+
+        }
+    }
+
+    Padding!(4px);
+}
