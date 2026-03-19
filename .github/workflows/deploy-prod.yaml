@@ -27,6 +27,9 @@ jobs:
       - name: Build projects
         run: npm run build -- -y
 
+      - name: Upload artifacts
+        run: npm run upload -- -s
+
       - name: Publish place (world)
         run: rbxcloud experience publish --filename dist/world.rbxl --place-id ${{ vars.PROD_WORLD_PLACEID }} --universe-id ${{ vars.PROD_EXPERIENCEID }} --version-type published --api-key ${{ secrets.OC_API_KEY_PROD }}
       

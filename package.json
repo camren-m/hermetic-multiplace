@@ -9,6 +9,7 @@
     "clean": "./scripts/clean.sh -l",
     "clean:full": "./scripts/clean.sh",
     "lint": "./scripts/lint.sh",
+    "upload": "./scripts/upload.sh",
     "compile:lobby": "rbxtsc -p ./places/lobby",
     "compile:world": "rbxtsc -p ./places/world",
     "compile:lobby:styles": "rsml build ./places/lobby/src",
