@@ -1,8 +1,7 @@
 import { env, orchestraConfig, script, semverString } from "rbxts-orchestra";
-import packageDef from "package.json"
 
 export default orchestraConfig({
-	releaseNumber: semverString(packageDef.version, ["staging"], ["dev"]),
+	releaseNumber: semverString("0.2.0", ["staging"], ["dev"]),
 	releaseName: "some assembly required",
 	environments: {
 		prod: { nodeEnv: "prod" },
