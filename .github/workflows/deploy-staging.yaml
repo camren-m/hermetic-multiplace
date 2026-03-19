@@ -28,6 +28,9 @@ jobs:
       - name: Install Rokit dependencies
         uses: CompeyDev/setup-rokit@v0.1.2
 
+      - name: Install NPM dependencies
+        run: npm ci
+
       - name: Build projects
         run: npx orchestra run build -- -y
 
