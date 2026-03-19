@@ -1,8 +1,9 @@
 {
 	"include": [
-		"eslint.config.ts"
+		"eslint.config.ts",
+		"orchestra.config.ts",
 	],
 	"compilerOptions": {
 		"module": "esnext"
-	}
+	},
 }

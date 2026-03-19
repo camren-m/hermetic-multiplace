@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-SCRIPT_DIR=$(dirname "$0")
+PLACE_DIRECTORY="$PWD"
+PLACE_NAME=$(basename "$PLACE_DIRECTORY") 
 
-source $SCRIPT_DIR/env.sh
-$SCRIPT_DIR/checks.sh $1
+printf "\e[1;35mBuilding $PLACE_NAME.rbxl for release $RELEASE_NUMBER ($RELEASE_NAME)...\e[0m\n"
+mkdir -p $ORCHESTRA_DIR/dist
 
-printf "\e[1;35mBuilding release $RELEASE_NUMBER ($RELEASE_NAME)...\e[0m\n"
-mkdir -p dist/
+printf "\e[1;35mCompiling styles...\e[0m\n"
+(rsml build src/ && rsml build $ORCHESTRA_DIR/places/common)
 
-printf "\e[1;35mCompiling world code & styles...\e[0m\n"
-(npm run compile:world:styles && npm run compile:world)
-printf "\e[1;35mCompiling lobby code & styles...\e[0m\n"
-(npm run compile:lobby:styles && npm run compile:lobby)
+printf "\e[1;35mCompiling TypeScript...\e[0m\n"
+(cd $ORCHESTRA_DIR && npx roblox-ts -p $PLACE_DIRECTORY)
 
-printf "\e[1;35mBuilding world rbxl...\e[0m\n"
-rojo build -o dist/world.rbxl places/world/default.project.json
-printf "\e[1;35mBuilding lobby rbxl...\e[0m\n"
-rojo build -o dist/lobby.rbxl places/lobby/default.project.json
-printf "\e[1;32mBuilt release $RELEASE_NUMBER ($RELEASE_NAME)!\e[0m\n"
+printf "\e[1;35mBuilding $PLACE_NAME.rbxl...\e[0m\n"
+rojo build -o $ORCHESTRA_DIR/dist/$PLACE_NAME.rbxl
+
+printf "\e[1;32mBuilt $PLACE_NAME.rbxl for release $RELEASE_NUMBER ($RELEASE_NAME)!\e[0m\n"

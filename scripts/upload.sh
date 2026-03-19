@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-SCRIPT_DIR=$(dirname "$0")
-
-source $SCRIPT_DIR/env.sh
-$SCRIPT_DIR/checks.sh $1
-
 SKIP_BUILD="0"
 while getopts ":s" flag; do
     case "${flag}" in
@@ -14,7 +9,7 @@ while getopts ":s" flag; do
 done
 
 if [ "$SKIP_BUILD" == "0" ]; then
-    $SCRIPT_DIR/build.sh
+    orchestra run build
 else
     printf "\e[1;33m-s provided, skipping build and using already built artifacts\e[0m\n"
 fi
@@ -33,7 +28,7 @@ elif [ "$NODE_ENV" == "staging" ]; then
         --title "($RELEASE_NUMBER) $RELEASE_NAME"
 else
     printf "\e[1;33mNot in a staging or prod environment, not pushing release\e[0m\n"
-    exit 1
+    exit
 fi
 
 gh release upload v$RELEASE_NUMBER dist/*.rbxl
