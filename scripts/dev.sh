@@ -19,6 +19,7 @@ fi
 # -r is used here as concurrently has issues with npm run if not using raw IO
 # FIXME: ideally we don't use raw IO so that nametags are visible (-n)
 printf "\e[1;32mBeginning watch & serve!\e[0m\n"
-concurrently -r --kill-others -n "world:compile:styles,world:compile,world:serve,lobby:compile:styles,lobby:compile,lobby:serve" \
+concurrently -r --kill-others -n "common:compile:styles,world:compile:styles,world:compile,world:serve,lobby:compile:styles,lobby:compile,lobby:serve" \
+    "cd places/common && npx chokidar src/**/*.rsml -c \"rsml build src\"" \
     "cd places/world && npx chokidar src/**/*.rsml -c \"rsml build src\"" "npm run compile:world -- -w" "cd places/world && rojo serve" \
     "cd places/lobby && npx chokidar src/**/*.rsml -c \"rsml build src\"" "npm run compile:lobby -- -w" "cd places/lobby && rojo serve"

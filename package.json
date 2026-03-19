@@ -12,8 +12,8 @@
     "upload": "./scripts/upload.sh",
     "compile:lobby": "rbxtsc -p ./places/lobby",
     "compile:world": "rbxtsc -p ./places/world",
-    "compile:lobby:styles": "rsml build ./places/lobby/src",
-    "compile:world:styles": "rsml build ./places/world/src"
+    "compile:lobby:styles": "rsml build ./places/common/src && rsml build ./places/lobby/src",
+    "compile:world:styles": "rsml build ./places/common/src && rsml build ./places/world/src"
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^3.0.0-types.0",

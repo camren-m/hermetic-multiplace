@@ -20,6 +20,6 @@ else
 fi
 
 rm -rf $SCRIPT_DIR/../places/*/out
-rm -rf $SCRIPT_DIR/../places/**.style.model.json
+rm -rf $SCRIPT_DIR/../places/**/*.style.model.json
 rm -rf $SCRIPT_DIR/../places/*/include
 rm -f $SCRIPT_DIR/../places/*/flamework.build
