@@ -9,6 +9,8 @@ env:
   NODE_ENV: prod
   GH_TOKEN: ${{ github.token }}
 
+permissions: write-all
+
 jobs:
   deploy-prod:
     name: Deploy (production)

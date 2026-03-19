@@ -9,6 +9,8 @@ env:
   NODE_ENV: staging
   GH_TOKEN: ${{ github.token }}
 
+permissions: write-all
+
 jobs:
   deploy-staging:
     name: Deploy (staging)
