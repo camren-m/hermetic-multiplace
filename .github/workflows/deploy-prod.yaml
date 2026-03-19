@@ -38,5 +38,5 @@ jobs:
         run: npx orchestra run upload -- -s
 
       - name: Publish to Roblox
-        run: npx orchestra run publish -- -s
+        run: OC_API_KEY=${{ secrets.OC_API_KEY }} npx orchestra run publish -- -s
 
