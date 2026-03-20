@@ -15,7 +15,7 @@ A template for a fully hermetic-built & automatically deployed multiplace Roblox
 - [UI Labs](https://ui-labs.luau.page) for user interface design & development previews
 - [Charm](https://github.com/littensy/charm/) for state management
 - [RSML](https://rsml.style) for user interface styling
-- [Custom bash build orchestrator]("./scripts") for project management, building, and development
+- [rbxts-orchestra](https://github.com/camren-m/orchestra) and [custom build scripts]("./scripts") for project management, building, and development
 - Custom CI workflows with:
   - [eslint](https://eslint.style) and [prettier](https://prettier.io) for code style linting
   - [rbxcloud](https://sleitnick.github.io/rbxcloud/) for automatic deployments to staging & production experiences
