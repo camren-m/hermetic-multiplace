@@ -20,7 +20,9 @@ export default orchestraConfig({
 		prepare: script("./scripts/prepare.sh"),
 		upload: script("./scripts/upload.sh"),
 		lint: script("./scripts/lint.sh"),
-		clean: script("./scripts/clean.sh"),
+		clean: script("./scripts/clean.sh", {
+			skipPrepare: true,
+		}),
 	},
 	places: [
 		{
