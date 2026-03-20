@@ -1,5 +1,6 @@
 import { env, orchestraConfig, script, semverString } from "rbxts-orchestra";
-import packageDef from "./package.json"
+
+import packageDef from "./package.json";
 
 const EXPERIENCE_ID = env({
 	prod: 9899262995,
