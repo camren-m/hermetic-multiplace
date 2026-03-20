@@ -20,4 +20,6 @@ else
     printf "\e[1;33m-s provided, skipping build and using already built artifacts\e[0m\n"
 fi
 
-rbxcloud experience publish --filename $ORCHESTRA_DIR/dist/$PLACE_NAME.rbxl --place-id $PLACE_ID --universe-id $EXPERIENCE_ID --version-type published --api-key $OC_API_KEY
+rbxcloud experience publish --filename $ORCHESTRA_DIR/dist/$PLACE_NAME.rbxl \
+    --place-id $PLACE_ID --universe-id $EXPERIENCE_ID --version-type published \
+    --api-key $OC_API_KEY
