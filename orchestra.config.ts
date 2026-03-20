@@ -20,7 +20,9 @@ export default orchestraConfig({
 		prepare: script("./scripts/prepare.sh"),
 		upload: script("./scripts/upload.sh"),
 		lint: script("./scripts/lint.sh"),
-		clean: script("./scripts/clean.sh"),
+		clean: script("./scripts/clean.sh", {
+			skipPrepare: true,
+		}),
 	},
 	places: [
 		{
@@ -33,10 +35,10 @@ export default orchestraConfig({
 			}),
 			scripts: {
 				build: script("./scripts/build.sh"),
+				publish: script("./scripts/publish.sh"),
 				dev: script("./scripts/dev.sh", {
 					waitForExit: false,
 				}),
-				publish: script("./scripts/publish.sh"),
 			},
 		},
 		{

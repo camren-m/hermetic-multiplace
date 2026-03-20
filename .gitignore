@@ -1,16 +1,14 @@
-node_modules/
-include/
-out/
-include/
+# System
 .DS_Store/
 .DS_Store
+
+# Dependencies
+node_modules/
+include/
+
+# Build artifacts
+dist/
+out/
 *.tsbuildinfo
 flamework.build
-build.rbxl*
-build.rbxl*.lock
-.yalc
-yalc.lock
-flamework.build
-dist/
 *.style.model.json
-.lastenv

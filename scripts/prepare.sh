@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# Responsible for ensuring the validity of the development environment before
+# builds, run before all other scripts as a prepare script through the
+# orchestra.
+
 set -e
 
 ALWAYS_YES="0"

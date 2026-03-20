@@ -1,1 +1,2 @@
+# Normalize Windows CRLF line endings to POSIX-compliant LF
 * text=auto eol=lf
