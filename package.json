@@ -1,6 +1,6 @@
 {
   "name": "hermetic-multiplace-template",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "main": "out/init.lua",
   "license": "MIT",
   "devDependencies": {
