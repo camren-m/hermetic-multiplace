@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+PLACE_DIRECTORY="$PWD"
+PLACE_NAME=$(basename "$PLACE_DIRECTORY") 
+
 SKIP_BUILD="0"
 while getopts ":s" flag; do
     case "${flag}" in
@@ -14,4 +17,4 @@ else
     printf "\e[1;33m-s provided, skipping build and using already built artifacts\e[0m\n"
 fi
 
-rbxcloud experience publish --filename $ORCHESTRA_DIR/dist/world.rbxl --place-id $PLACE_ID --universe-id $EXPERIENCE_ID --version-type published --api-key $OC_API_KEY
+rbxcloud experience publish --filename $ORCHESTRA_DIR/dist/$PLACE_NAME.rbxl --place-id $PLACE_ID --universe-id $EXPERIENCE_ID --version-type published --api-key $OC_API_KEY
