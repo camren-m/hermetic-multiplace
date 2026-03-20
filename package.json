@@ -17,7 +17,7 @@
     "eslint-plugin-unused-imports": "^4.3.0",
     "jiti": "^2.6.1",
     "prettier": "^3.7.4",
-    "rbxts-orchestra": "^0.1.3",
+    "rbxts-orchestra": "0.2.0",
     "rbxts-transformer-flamework": "^1.3.2",
     "roblox-ts": "^3.0.0",
     "typescript": "^5.5.3",
