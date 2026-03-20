@@ -35,10 +35,10 @@ export default orchestraConfig({
 			}),
 			scripts: {
 				build: script("./scripts/build.sh"),
+				publish: script("./scripts/publish.sh"),
 				dev: script("./scripts/dev.sh", {
 					waitForExit: false,
 				}),
-				publish: script("./scripts/publish.sh"),
 			},
 		},
 		{
