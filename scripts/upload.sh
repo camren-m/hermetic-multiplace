@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# Uploads all .rbxl artifacts in dist/ to GitHub releases using gh release,
+# automatically tagging them with the current release number as given by the
+# orchestra. Runs only in staging or prod environments.
+
 set -e
 
 SKIP_BUILD="0"

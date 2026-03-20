@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Concurrently watches .rsml styles and TypeScript code in a place and rebuilds
+# when updated. Also serves the Rojo project for that place.
+
 set -e
 
 PLACE_DIRECTORY="$PWD"

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Build TypeScript code, RSML styles, and .rbxl artifacts in a place. Outputs
+# the final .rbxl build artifact to dist/.
+
 set -e
 
 PLACE_DIRECTORY="$PWD"

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Cleans TypeScript & RSML build artifacts. Pass -f to perform a full clean,
+# including dependencies and .rbxl build artifacts.
+
 set -e
 
 LIMITED_CLEAN="1"

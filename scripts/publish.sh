@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Publishes a single place to Roblox using rbxcloud. Requires a valid
+# OC_API_KEY secret to be set.
+
 set -e
 
 PLACE_DIRECTORY="$PWD"
