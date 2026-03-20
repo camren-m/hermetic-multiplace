@@ -1,4 +1,5 @@
 import { env, orchestraConfig, script, semverString } from "rbxts-orchestra";
+import packageDef from "./package.json"
 
 const EXPERIENCE_ID = env({
 	prod: 9899262995,
@@ -7,7 +8,7 @@ const EXPERIENCE_ID = env({
 });
 
 export default orchestraConfig({
-	releaseNumber: semverString("0.2.0", ["staging"], ["dev"]),
+	releaseNumber: semverString(packageDef.version, ["staging"], ["dev"]),
 	releaseName: "some assembly required",
 	environments: {
 		prod: { nodeEnv: "prod" },
