@@ -10,7 +10,7 @@ const EXPERIENCE_ID = env({
 
 export default orchestraConfig({
 	releaseNumber: semverString(packageDef.version, ["staging"], ["dev"]),
-	releaseName: "some assembly required",
+	releaseName: "assembly minimal, instability guaranteed",
 	environments: {
 		prod: { nodeEnv: "prod" },
 		staging: { nodeEnv: "staging" },
