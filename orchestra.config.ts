@@ -17,9 +17,7 @@ export default orchestraConfig({
 	scripts: {
 		prepare: script("./scripts/prepare.sh"),
 		upload: script("./scripts/upload.sh"),
-		lint: script("./scripts/lint.sh", {
-			ignoreNonZeroExitCode: true,
-		}),
+		lint: script("./scripts/lint.sh"),
 		clean: script("./scripts/clean.sh"),
 	},
 	places: [
