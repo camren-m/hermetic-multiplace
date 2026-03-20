@@ -3,6 +3,12 @@
 	"version": "0.3.0",
 	"main": "out/init.lua",
 	"license": "MIT",
+	"scripts": {
+		"start": "orchestra run dev",
+		"build": "orchestra run build",
+		"lint": "orchestra run lint",
+		"clean": "orchestra run clean"
+	},
 	"devDependencies": {
 		"@rbxts/compiler-types": "^3.0.0-types.0",
 		"@rbxts/types": "^1.0.896",
