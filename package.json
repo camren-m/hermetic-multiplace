@@ -1,5 +1,5 @@
 {
-	"name": "hermetic-multiplace-template",
+	"name": "rbxts-launchpad",
 	"version": "0.3.0",
 	"main": "out/init.lua",
 	"license": "MIT",
@@ -13,7 +13,6 @@
 		"@rbxts/compiler-types": "^3.0.0-types.0",
 		"@rbxts/types": "^1.0.896",
 		"chokidar-cli": "^3.0.0",
-		"concurrently": "^9.2.1",
 		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",

@@ -1,5 +1,5 @@
 {
-    "name": "Hermetic Multiplace Template (lobby)",
+    "name": "Launchpad (lobby)",
     "servePort": 34871,
     "servePlaceIds": [
         89746346109474,

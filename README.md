@@ -1,4 +1,4 @@
-# Hermetic Multiplace Template
+# Launchpad
 A template for hermetically built, continuously deployed, multi-place, and easily configured Roblox-TS experiences.
 
 ## Branches
@@ -19,4 +19,4 @@ A template for hermetically built, continuously deployed, multi-place, and easil
 - Custom CI workflows with:
   - [eslint](https://eslint.style) and [prettier](https://prettier.io) for code style linting
   - [rbxcloud](https://sleitnick.github.io/rbxcloud/) for automatic deployments to staging & production experiences
-  - [GitHub CLI](https://cli.github.com) for build artifact uploads to [releases](https://github.com/camren-m/hermetic-multiplace/releases)
+  - [GitHub CLI](https://cli.github.com) for build artifact uploads to [releases](https://github.com/camren-m/rbxts-launchpad/releases)
