@@ -6,8 +6,9 @@
 set -e
 
 ## ============= !! REMOVE ME VVV ==============
-if [ "$(basename $(git config --get remote.origin.url))" != "rbxts-launchpad.git" ]; then
+if [ "$(basename $(git config --get remote.origin.url))" != "launchpad.git" ]; then
     printf "\e[1;32mWelcome! To interactively setup your repo, see \e]8;;http://launchpad.camrenmum.me/docs/setup \e\\\\the setup guide\e]8;;\e\\\\ \e[0m\n"
+    printf "\e[1;34m\tP.S You're seeing this because you've recently cloned the launchpad template repository, and not yet completed the setup.\e[0m\n"
     exit 1
 fi
 ## ============= !! REMOVE ME ^^^ =============
