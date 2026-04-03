@@ -5,6 +5,13 @@
 
 set -e
 
+## ============= !! REMOVE ME VVV ==============
+if [ "$(basename $(git config --get remote.origin.url))" != "rbxts-launchpad.git" ]; then
+    printf "\e[1;32mWelcome! To interactively setup your repo, see \e]8;;http://launchpad.camrenmum.me/docs/setup \e\\\\the setup guide\e]8;;\e\\\\ \e[0m\n"
+    exit 1
+fi
+## ============= !! REMOVE ME ^^^ =============
+
 ALWAYS_YES="0"
 while getopts ":y" flag; do
     case "${flag}" in
