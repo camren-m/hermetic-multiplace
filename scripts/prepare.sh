@@ -18,47 +18,42 @@ function yes_or_no {
             read -p "$* [y/n]: " yn
             case $yn in
                 [Yy]*) return 0 ;;  
-                [Nn]*) echo "Aborted" ; exit 1 ;;
+                [Nn]*) printf "\e[1;31mAborted\e[0m\n" ; exit 1 ;;
             esac
         done
     else
-        echo "-y provided, yes selected"
+        printf "\e[1;33m-y provided, yes selected\e[0m\n"
     fi
     return 0
 }
 
 if ! command -v npm > /dev/null; then
-    echo "NPM/Node.JS must be installed!"
+    printf "\e[1;31mNPM/Node.JS must be installed!\e[0m\n"
     exit 1
 fi
 
 if [ ! -d "node_modules" ]; then
-    echo "NPM dependencies must be installed. Install now? : "
+    printf "\e[1;35mNPM dependencies must be installed. Install now? \e[0m\n"
     yes_or_no
     npm ci
 fi
 
 # rokit is used to install rojo and rbxcloud
 if ! command -v rokit > /dev/null; then
-    echo "Rokit must be installed!"
-    exit 1
+    printf "\e[1;35mRokit must be installed. Install now? \e[0m\n"
+    yes_or_no
+    curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
 fi
 
 if ! command -v rbxcloud > /dev/null; then
-    echo "Rokit dependencies must be installed. Install now? : "
+    printf "\e[1;35mRokit dependencies must be installed. Install now? \e[0m\n"
     yes_or_no
     rokit install
 fi
 
 
 if ! command -v rojo > /dev/null; then
-    echo "Rokit dependencies must be installed. Install now? : "
+    printf "\e[1;35mRokit dependencies must be installed. Install now? \e[0m\n"
     yes_or_no
     rokit install
-fi
-
-if ! command -v concurrently > /dev/null; then
-    echo "Concurrently must be installed. Install now? : "
-    yes_or_no
-    npm i -g concurrently@latest
 fi
