@@ -16,10 +16,10 @@ export default orchestraConfig({
 	releaseNumber: semverString(
 		// package.json version
 		packageDef.version,
-		// Append +<commit-hash> in staging environment
-		["staging"],
-		// Append -<local-username> in dev environment
-		["dev"],
+		// Append +<commit-hash> in staging & dev environments
+		["staging", "dev"],
+		// Append -<branch basename> in staging & dev environments
+		["staging", "dev"],
 	),
 	// A human-friendly release codename
 	releaseName: "assembly minimal, instability guaranteed",
