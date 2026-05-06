@@ -1,6 +1,3 @@
-$MerriweatherRegular = font("Merriweather");
-$MerriweatherRegularItalic = font("Merriweather", :Regular, :Italic);
-
 Frame {
     Active = false;
     AutomaticSize = :None;
@@ -27,7 +24,7 @@ TextLabel {
     BackgroundTransparency = 1;
     BorderSizePixel = 0;
     TextColor3 = #fff;
-    FontFace = $MerriweatherRegular;
+    FontFace = font("Merriweather");
 }
 TextButton {
     BackgroundTransparency = 1;

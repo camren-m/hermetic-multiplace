@@ -1,8 +1,8 @@
-.WatermarkAppRoot {
+Frame.WatermarkAppRoot {
     Size = udim2(100%);
 
     > TextLabel {
-        FontFace = $MerriweatherRegular;
+        FontFace = font("Merriweather");
         AnchorPoint = vec2(0, 1);
         Position = udim2(0%, 100%);
         AutomaticSize = :XY;
