@@ -1,5 +1,5 @@
 # Launchpad
-A template for hermetically built, continuously deployed, multi-place, and easily configured Roblox-TS experiences.
+A template for fully managed, continuously deployed, multi-place, and easily configured Roblox-TS experiences
 
 ## Branches
 - ``prod`` - The currently live source code, automatically published to the production game via rbxcloud and GitHub Actions. Only staging should be merged into this branch after thorough QA testing.
