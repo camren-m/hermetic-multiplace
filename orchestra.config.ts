@@ -22,7 +22,7 @@ export default orchestraConfig({
 		["staging", "dev"],
 	),
 	// A human-friendly release codename
-	releaseName: "assembly minimal, instability guaranteed",
+	releaseName: "are we there yet?",
 
 	// A list of possible environments and situations in which they will be
 	// chosen
