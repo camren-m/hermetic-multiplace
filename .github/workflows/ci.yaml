@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: 'npm'
@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: CompeyDev/setup-rokit@v0.2.0
+        uses: camren-m/setup-rokit@v0.2.1
         with:
           cache: true
 
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: 'npm'
@@ -66,7 +66,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: CompeyDev/setup-rokit@v0.2.0
+        uses: camren-m/setup-rokit@v0.2.1
         with:
           cache: true
 
@@ -102,7 +102,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup Node 24
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: 'npm'
@@ -111,7 +111,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: CompeyDev/setup-rokit@v0.2.0
+        uses: camren-m/setup-rokit@v0.2.1
         with:
           cache: true
 
