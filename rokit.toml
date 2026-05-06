@@ -6,4 +6,4 @@
 [tools]
 rojo = "rojo-rbx/rojo@7.6.1"
 rbxcloud = "Sleitnick/rbxcloud@0.5.0"
-rsml = "camren-m/rsml-cli@0.0.14" # TODO: use rbx-rsml/rsml-cli once rbx-rsml/rsml-rust is updated with PR #6's changes
+rsml = "rbx-rsml/rsml-cli@0.0.18"
