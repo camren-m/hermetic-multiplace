@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: camren-m/setup-rokit@v0.2.1
+        uses: CompeyDev/setup-rokit@v0.2.1
         with:
           cache: true
 
@@ -66,7 +66,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: camren-m/setup-rokit@v0.2.1
+        uses: CompeyDev/setup-rokit@v0.2.1
         with:
           cache: true
 
@@ -111,7 +111,7 @@ jobs:
         run: npm ci
 
       - name: Install Rokit dependencies
-        uses: camren-m/setup-rokit@v0.2.1
+        uses: CompeyDev/setup-rokit@v0.2.1
         with:
           cache: true
 
