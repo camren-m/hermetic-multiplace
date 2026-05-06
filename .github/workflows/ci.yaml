@@ -12,7 +12,13 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     environment:
-      name: ${{ case(github.ref_name == 'prod', 'prod', github.ref_name == 'staging', 'staging', 'dev') }}
+      deployment: false
+      name: |
+        ${{ case(
+          github.ref_name == 'prod', 'prod',
+          github.ref_name == 'staging', 'staging',
+          'dev'
+        ) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -39,7 +45,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     environment:
-      name: ${{ case(github.ref_name == 'prod', 'prod', github.ref_name == 'staging', 'staging', 'dev') }}
+      deployment: false
+      name: |
+        ${{ case(
+          github.ref_name == 'prod', 'prod',
+          github.ref_name == 'staging', 'staging',
+          'dev'
+        ) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -79,7 +91,12 @@ jobs:
     needs: build
     if: ${{ github.ref_name == 'prod' || github.ref_name == 'staging'  }}
     environment:
-      name: ${{ case(github.ref_name == 'prod', 'prod', github.ref_name == 'staging', 'staging', 'dev') }}
+      name: |
+        ${{ case(
+          github.ref_name == 'prod', 'prod',
+          github.ref_name == 'staging', 'staging',
+          'dev'
+        ) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
